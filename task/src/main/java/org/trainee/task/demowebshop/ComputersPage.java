@@ -13,7 +13,7 @@ public class ComputersPage extends BasePage {
         super(driver);
     }
 
-    public void selectDesctopsComputers(){
+    public void selectDesktopsComputers() {
         waiter.waitForElementToBeClickable(desktopsButton);
         desktopsButton.click();
     }

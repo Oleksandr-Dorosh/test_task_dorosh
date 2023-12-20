@@ -16,16 +16,10 @@ public class Waiter {
         this.wait = new WebDriverWait(driver, timeout);
     }
 
-    public void waitForVisibilityOfElement(By locator) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    public void waitForElementToBeClickable(By locator) {
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
     public void waitForElementToBeClickable(WebElement locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-
+    public void waitForElementToBeVisible(WebElement locator) {
+        wait.until(ExpectedConditions.visibilityOf(locator));
+    }
 }

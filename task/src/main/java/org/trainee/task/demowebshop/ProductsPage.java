@@ -35,12 +35,10 @@ public class ProductsPage extends BasePage {
 
     public void addToCartProductWithHighestPriceProduct() {
         List<WebElement> p = allPrices.stream()
-                .sorted((o1, o2)->
+                .sorted((o1, o2) ->
                         Double.valueOf(o1.getText()).compareTo(Double.valueOf(o2.getText())))
                 .collect(Collectors.toList());
-        p.get(p.size()-1)
+        p.get(p.size() - 1)
                 .findElement(By.xpath("./parent::div/../div/input")).click();
     }
-
-
 }

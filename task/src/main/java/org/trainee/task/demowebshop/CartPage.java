@@ -14,6 +14,7 @@ public class CartPage extends BasePage {
     }
 
     public boolean isItemDisplayed() {
+        waiter.waitForElementToBeVisible(item);
         return item.isDisplayed();
     }
 }

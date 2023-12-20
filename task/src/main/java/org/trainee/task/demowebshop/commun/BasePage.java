@@ -7,6 +7,7 @@ import org.trainee.task.utils.Waiter;
 public class BasePage {
 
     protected Waiter waiter;
+
     public BasePage(WebDriver driver) {
         waiter = new Waiter(driver);
         PageFactory.initElements(driver, this);
